@@ -38,6 +38,11 @@ export function Home() {
             return;
         }
 
+        if (roomRef.val().endedAt) {
+            alert('Sala procurada já foi encerrada!')
+            return;
+        }
+
         history.push(`/rooms/${roomCode}`);
     }
     return (
